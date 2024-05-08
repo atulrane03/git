@@ -60,7 +60,7 @@ pipeline {
                 echo 'Waiting for approval'
                 sleep 10
                 echo 'Approval Received'
-                echo "Deployed to staging AWS EC2 server: $STAGING_ENVIRONMENT"
+                echo "Deployed to staging AWS EC2 server:"
             }
         }
         stage('Integration Tests on Staging') {
@@ -70,7 +70,7 @@ pipeline {
         }
         stage('Deploy to Production') {
             steps {
-                echo "Deploy application to a AWS EC2 production environment: $PRODUCTION_ENVIRONMENT"
+                echo "Deploy application to a AWS EC2 production environment:"
             }
         }
     }
