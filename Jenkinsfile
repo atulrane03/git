@@ -23,7 +23,7 @@ pipeline {
                 }
                 failure {
                     emailext attachLog: true,
-                    mail to: "atulrane470@gmail.com",
+                    mailto: "atulrane470@gmail.com",
                     subject: "Tests stage is unsuccessfull.",
                     body: "Please find the attached log of the tests "
                 }
@@ -52,7 +52,7 @@ pipeline {
                     email to: "atulrane470@gmail.com",
                     subject: "Security stage is unsuccessfull.",
                     body: "Please find the attached log of the scan."
-                }
+                   }
                 }
         }
         stage('Deploy to Staging') {
