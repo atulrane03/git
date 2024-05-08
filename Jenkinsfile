@@ -17,21 +17,21 @@ pipeline {
             post {
                 success {
                     emailext attachLog: true,
-                    mail to: "atulrane470@gmail.com",
-                    subject: "Tests stage is successfull.",
+                    recipient: "atulrane470@gmail.com",
+                    subject: "Tests stage is successful.",
                     body: "Please find the attached results of the tests"
                 }
                 failure {
                     emailext attachLog: true,
-                    mailto: "atulrane470@gmail.com",
-                    subject: "Tests stage is unsuccessfull.",
-                    body: "Please find the attached log of the tests "
+                    recipient: "atulrane470@gmail.com",
+                    subject: "Tests stage is unsuccessful.",
+                    body: "Please find the attached log of the tests"
                 }
-                }
+            }
         }
         stage('Code Analysis') {
             steps {
-                echo 'External tool that analyze if the code meets the industry standards '
+                echo 'External tool that analyzes if the code meets industry standards'
                 echo 'Tools used: SonarQube, Coverity, CodeScene'
             }
         }
@@ -43,17 +43,17 @@ pipeline {
             post {
                 success {
                     emailext attachLog: true,
-                    email to: "atulrane470@gmail.com",
-                    subject: "Security scan stage is successfull.",
+                    recipient: "atulrane470@gmail.com",
+                    subject: "Security scan stage is successful.",
                     body: "Please find the attached results of the scan"
                 }
                 failure {
                     emailext attachLog: true,
-                    email to: "atulrane470@gmail.com",
-                    subject: "Security stage is unsuccessfull.",
+                    recipient: "atulrane470@gmail.com",
+                    subject: "Security stage is unsuccessful.",
                     body: "Please find the attached log of the scan."
-                   }
                 }
+            }
         }
         stage('Deploy to Staging') {
             steps {
@@ -70,7 +70,7 @@ pipeline {
         }
         stage('Deploy to Production') {
             steps {
-                echo "Deploy application to a AWS EC2 production environment:"
+                echo "Deploy application to an AWS EC2 production environment:"
             }
         }
     }
