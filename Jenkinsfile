@@ -17,13 +17,13 @@ pipeline {
             post {
                 success {
                     emailext attachLog: true,
-                    to: "$TEST_EMAIL_RECEPIENT",
+                    to: "atulrane470@gmail.com",
                     subject: "Tests stage is successfull.",
                     body: "Please find the attached results of the tests"
                 }
                 failure {
                     emailext attachLog: true,
-                    to: "$TEST_EMAIL_RECEPIENT",
+                    to: "atulrane470@gmail.com",
                     subject: "Tests stage is unsuccessfull.",
                     body: "Please find the attached log of the tests "
                 }
@@ -43,13 +43,13 @@ pipeline {
             post {
                 success {
                     emailext attachLog: true,
-                    to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
+                    to: "atulrane470@gmail.com",
                     subject: "Security scan stage is successfull.",
                     body: "Please find the attached results of the scan"
                 }
                 failure {
                     emailext attachLog: true,
-                    to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
+                    to: "atulrane470@gmail.com",
                     subject: "Security stage is unsuccessfull.",
                     body: "Please find the attached log of the scan."
                 }
