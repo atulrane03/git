@@ -66,7 +66,7 @@ pipeline {
         stage('Deploy to Staging') {
             steps {
                 echo "Stage 5: Deploy to Staging"
-                echo "Deploy the application to a staging server (e.g., AWS EC2 instance)"
+                echo "Deployed the application to a AWS EC2 server"
             }
         }
         
@@ -81,7 +81,7 @@ pipeline {
         stage('Deploy to Production') {
             steps {
                 echo "Stage 7: Deploy to Production"
-                echo "Deploy the application to a production server (e.g., AWS EC2 instance)"
+                echo "Deploy the application to a AWS EC2 production environment"
             }
         }
     }
