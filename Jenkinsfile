@@ -82,7 +82,6 @@ pipeline {
             steps {
                 echo "Stage 7: Deploy to Production"
                 echo "Deploy the application to a AWS EC2 production environment"
-                echo"atul is great"
             }
         }
     }
